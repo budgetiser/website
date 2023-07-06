@@ -1,0 +1,9 @@
+#logo_white {
+  height: 50px;
+}
+#title {
+  color: white;
+}
+#heading {
+  display: flex;
+}
