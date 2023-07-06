@@ -15,6 +15,7 @@ import { AppComponent } from './app.component';
 import { PrivacyComponent } from './privacy/privacy.component';
 import { DisclaimerComponent } from './disclaimer/disclaimer.component';
 import { HomeComponent } from './home/home.component';
+import { FooterComponent } from './footer/footer.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -28,7 +29,8 @@ const routes: Routes = [
     AppComponent,
     PrivacyComponent,
     DisclaimerComponent,
-    HomeComponent
+    HomeComponent,
+    FooterComponent
   ],
   imports: [
     RouterModule.forRoot(routes),
