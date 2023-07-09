@@ -16,6 +16,7 @@ import { PrivacyComponent } from './privacy/privacy.component';
 import { DisclaimerComponent } from './disclaimer/disclaimer.component';
 import { HomeComponent } from './home/home.component';
 import { FooterComponent } from './footer/footer.component';
+import { GalleryComponent } from './gallery/gallery.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -30,7 +31,7 @@ const routes: Routes = [
     PrivacyComponent,
     DisclaimerComponent,
     HomeComponent,
-    FooterComponent
+    FooterComponent,
   ],
   imports: [
     RouterModule.forRoot(routes),
@@ -39,6 +40,7 @@ const routes: Routes = [
     MatIconModule,
     MatTooltipModule,
     MatSidenavModule,
+    GalleryComponent
   ],
   providers: [],
   bootstrap: [AppComponent]
