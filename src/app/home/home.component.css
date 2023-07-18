@@ -1,0 +1,16 @@
+#logo_white {
+  height: 50px;
+}
+#title {
+  color: white;
+  padding-left: 10px;
+}
+#heading {
+  display: flex;
+  align-items: center;
+}
+#home_content {
+  display: flex;
+  gap: 100px;
+  flex-direction: row;
+}

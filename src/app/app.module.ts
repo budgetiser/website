@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; 
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 // Material
 import { MatIconModule } from '@angular/material/icon';
@@ -15,11 +15,13 @@ import { AppComponent } from './app.component';
 import { PrivacyComponent } from './privacy/privacy.component';
 import { DisclaimerComponent } from './disclaimer/disclaimer.component';
 import { HomeComponent } from './home/home.component';
+import { FooterComponent } from './footer/footer.component';
+import { GalleryComponent } from './gallery/gallery.component';
 
 const routes: Routes = [
-  { path: 'home', component:  HomeComponent},
-  { path: 'privacy', component:  PrivacyComponent},
-  { path: 'disclaimer', component:  DisclaimerComponent},
+  { path: 'home', component: HomeComponent },
+  { path: 'privacy', component: PrivacyComponent },
+  { path: 'disclaimer', component: DisclaimerComponent },
   { path: '', redirectTo: '/home', pathMatch: 'full' }
 ]
 
@@ -28,7 +30,8 @@ const routes: Routes = [
     AppComponent,
     PrivacyComponent,
     DisclaimerComponent,
-    HomeComponent
+    HomeComponent,
+    FooterComponent,
   ],
   imports: [
     RouterModule.forRoot(routes),
@@ -37,6 +40,7 @@ const routes: Routes = [
     MatIconModule,
     MatTooltipModule,
     MatSidenavModule,
+    GalleryComponent
   ],
   providers: [],
   bootstrap: [AppComponent]
