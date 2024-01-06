@@ -34,7 +34,7 @@ const routes: Routes = [
     FooterComponent,
   ],
   imports: [
-    RouterModule.forRoot(routes),
+    RouterModule.forRoot(routes, { useHash: true }),
     BrowserModule,
     BrowserAnimationsModule,
     MatIconModule,
