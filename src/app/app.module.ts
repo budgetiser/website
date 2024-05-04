@@ -8,22 +8,27 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatSidenavModule } from '@angular/material/sidenav';
 
 // Routing
-import { RouterModule, Routes } from '@angular/router'
+import { RouterModule, Routes } from '@angular/router';
 
 // Custom
 import { AppComponent } from './app.component';
 import { PrivacyComponent } from './privacy/privacy.component';
 import { DisclaimerComponent } from './disclaimer/disclaimer.component';
 import { HomeComponent } from './home/home.component';
-import { FooterComponent } from './footer/footer.component';
 import { GalleryComponent } from './gallery/gallery.component';
+import { LayoutComponent } from './layout/layout.component';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatButtonModule } from '@angular/material/button';
+import { MatListModule } from '@angular/material/list';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatCardModule } from '@angular/material/card';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'privacy', component: PrivacyComponent },
   { path: 'disclaimer', component: DisclaimerComponent },
-  { path: '', redirectTo: '/home', pathMatch: 'full' }
-]
+  { path: '', redirectTo: '/home', pathMatch: 'full' },
+];
 
 @NgModule({
   declarations: [
@@ -31,7 +36,7 @@ const routes: Routes = [
     PrivacyComponent,
     DisclaimerComponent,
     HomeComponent,
-    FooterComponent,
+    LayoutComponent,
   ],
   imports: [
     RouterModule.forRoot(routes, { useHash: true }),
@@ -40,9 +45,14 @@ const routes: Routes = [
     MatIconModule,
     MatTooltipModule,
     MatSidenavModule,
-    GalleryComponent
+    GalleryComponent,
+    MatToolbarModule,
+    MatButtonModule,
+    MatListModule,
+    MatGridListModule,
+    MatCardModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

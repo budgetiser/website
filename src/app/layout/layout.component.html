@@ -1,0 +1,68 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav
+    #drawer
+    mode="push"
+    class="sidenav"
+    fixedInViewport
+    [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+    [mode]="(isHandset$ | async) ? 'over' : 'side'"
+    [opened]="(isHandset$ | async) === false"
+  >
+    <mat-toolbar>Budgetiser</mat-toolbar>
+    <mat-nav-list>
+      <a mat-list-item href="#">Home</a>
+      <a mat-list-item href="#/privacy">Privacy Statement</a>
+      <a mat-list-item href="#/disclaimer">Legal Disclaimer</a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      @if (isHandset$ | async) {
+      <button
+        type="button"
+        aria-label="Toggle sidenav"
+        mat-icon-button
+        (click)="drawer.toggle()"
+      >
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+      }
+      <span>
+        <div class="TitleInRowContainer">
+          <img
+            class="icon"
+            id="logo_white"
+            src="/assets/logo_white.png"
+            alt="image"
+            height="50em"
+          />
+          <p id="title-text">Budgetiser</p>
+        </div>
+      </span>
+      <span class="spacer"></span>
+      <a
+        mat-raised-button
+        href="https://github.com/budgetiser/budgetiser/"
+        target="_blank"
+        id="github-button"
+        ><img
+          class="text-icon"
+          src="/assets/github_icon.png"
+          style="width: 35.5px; height: 20px"
+        />
+        <!-- <mat-icon>favorite</mat-icon> -->
+        Github</a
+      >
+    </mat-toolbar>
+
+    <!--mat-toolbar remains same-->
+
+    <div class="sidenav-scroll-wrapper">
+      <div class="sidenav-content">
+        <ng-content></ng-content>
+      </div>
+    </div>
+
+    <!-- Add Content Here -->
+  </mat-sidenav-content>
+</mat-sidenav-container>

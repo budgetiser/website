@@ -1,0 +1,35 @@
+.sidenav-container {
+  height: 100%;
+}
+
+.sidenav {
+  width: 200px;
+}
+
+.sidenav .mat-toolbar {
+  background: inherit;
+}
+
+.mat-toolbar.mat-primary {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+.TitleInRowContainer {
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  margin-right: 10px;
+}
+#title-text {
+  font-size: 2em;
+}
+.text-icon {
+  vertical-align: middle;
+  margin-bottom: 5px;
+}
+#github-button {
+  margin-left: auto;
+}
